@@ -208,7 +208,7 @@ int search(int round,int i, int n,int matrix[][n])
         chance_flag=0;      //skip one chance
         return 0;
     }*/
-    if(round==4 && lifeline==0)
+    if(round==2 && lifeline==0)
     {
         char option2;
         int option;
@@ -219,7 +219,7 @@ int search(int round,int i, int n,int matrix[][n])
         {
 	        printf("\nEnter a lifeline no[1-6]: \n" );
 	        scanf(" %c",&option2);
-            if(option2-'0'<1 && option2-'0'>6)
+            if((option2>='a' && option2<='z') || (option2>='A' && option2<='Z' ) || (option2-'0'<1) || (option2-'0'>6) )
             {
                 printf("You have entered an invalid option. Please try again!\n");
             }
